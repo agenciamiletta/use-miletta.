@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505">
+
+<title>USE MILETTA | Elegância no seu movimento</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #050505;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: entrada 1s ease;
+}
+
+.logo {
+  margin-bottom: 25px;
+}
+
+.logo img {
+  width: 210px;
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-texto {
+  font-family: Georgia, serif;
+  font-size: 35px;
+  letter-spacing: 5px;
+  color: #e5b5c9;
+}
+
+.frase {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #d5a1b8;
+  margin-bottom: 35px;
+}
+
+.linha {
+  width: 45px;
+  height: 1px;
+  background: #c58ca9;
+  margin: 0 auto 35px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.botao {
+  display: block;
+  padding: 20px 15px;
+  border: 1px solid #77717a;
+  border-radius: 7px;
+  background: #090909;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  transition: .3s ease;
+}
+
+.botao:hover {
+  border-color: #d58eaf;
+  color: #e5a8c2;
+  background: #171017;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px #d58eaf20;
+}
+
+.rodape {
+  margin-top: 55px;
+  color: #77717a;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+@keyframes entrada {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    width: 185px;
+  }
+
+  .botao {
+    padding: 18px 12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="logo">
+    <!-- Logo original: arquivo logo.png -->
+    <img src="logo.png" alt="Use Miletta"
+         onerror="this.style.display='none'">
+    <div class="logo-texto">USE MILETTA</div>
+  </div>
+
+  <p class="frase">Elegância no seu movimento.</p>
+
+  <div class="linha"></div>
+
+  <div class="links">
+
+    <a class="botao"
+       href="LINK_DO_DROP"
+       target="_blank">
+       DROP
+    </a>
+
+    <a class="botao"
+       href="https://wa.me/5511952987005"
+       target="_blank">
+       COMPRE PELO WHATSAPP
+    </a>
+
+    <a class="botao"
+       href="LINK_DO_GRUPO_VIP"
+       target="_blank">
+       GRUPO VIP
+    </a>
+
+    <a class="botao"
+       href="LINK_DO_INSTAGRAM"
+       target="_blank">
+       INSTAGRAM
+    </a>
+
+  </div>
+
+  <footer class="rodape">
+    USE MILETTA © 2026
+  </footer>
+
+</div>
+
+</body>
+</html>
