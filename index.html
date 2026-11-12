@@ -1,174 +1,233 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050505">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>USE MILETTA | Elegância no seu movimento</title>
+  <title>USE MILETTA | Elegância no seu movimento</title>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  min-height: 100vh;
-  background: #050505;
-  color: white;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 35px 20px;
-}
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
 
-.container {
-  width: 100%;
-  max-width: 420px;
-  text-align: center;
-  animation: entrada 1s ease;
-}
+      background-color: #e8e8e8;
+      background-image: url("fundo-prata-miletta.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
 
-.logo {
-  margin-bottom: 25px;
-}
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
 
-.logo img {
-  width: 210px;
-  max-width: 80%;
-  height: auto;
-  object-fit: contain;
-}
+    .container {
+      width: 100%;
+      max-width: 460px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
 
-.logo-texto {
-  font-family: Georgia, serif;
-  font-size: 35px;
-  letter-spacing: 5px;
-  color: #e5b5c9;
-}
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
 
-.frase {
-  font-size: 12px;
-  letter-spacing: 3px;
-  color: #d5a1b8;
-  margin-bottom: 35px;
-}
+    .logo img {
+      width: 175px;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
 
-.linha {
-  width: 45px;
-  height: 1px;
-  background: #c58ca9;
-  margin: 0 auto 35px;
-}
+    .frase {
+      font-size: 13px;
+      letter-spacing: 3px;
+      font-weight: 500;
+      color: #111;
+      margin-bottom: 28px;
+    }
 
-.links {
-  display: flex;
-  flex-direction: column;
-  gap: 17px;
-}
+    .linha {
+      width: 55px;
+      height: 2px;
+      background: #d88fb4;
+      margin: 0 auto 35px;
+    }
 
-.botao {
-  display: block;
-  padding: 20px 15px;
-  border: 1px solid #77717a;
-  border-radius: 7px;
-  background: #090909;
-  color: #fff;
-  text-decoration: none;
-  font-size: 12px;
-  letter-spacing: 2.5px;
-  transition: .3s ease;
-}
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
 
-.botao:hover {
-  border-color: #d58eaf;
-  color: #e5a8c2;
-  background: #171017;
-  transform: translateY(-3px);
-  box-shadow: 0 5px 20px #d58eaf20;
-}
+    .botao {
+      display: block;
+      width: 100%;
+      padding: 18px 20px;
 
-.rodape {
-  margin-top: 55px;
-  color: #77717a;
-  font-size: 10px;
-  letter-spacing: 3px;
-}
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
 
-@keyframes entrada {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+      border: 1px solid rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
 
-@media (max-width: 480px) {
-  .logo img {
-    width: 185px;
-  }
+      color: #111;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-decoration: none;
+      text-align: center;
 
-  .botao {
-    padding: 18px 12px;
-  }
-}
-</style>
+      box-shadow:
+        0 4px 18px rgba(70, 70, 70, 0.12),
+        inset 0 1px 2px rgba(255, 255, 255, 0.9);
+
+      transition: all 0.3s ease;
+    }
+
+    .botao:hover {
+      background: #f8dce9;
+      border-color: #d88fb4;
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 8px 25px rgba(216, 143, 180, 0.3);
+    }
+
+    .botao.drop {
+      background: rgba(255, 229, 241, 0.9);
+      border: 1px solid #d88fb4;
+    }
+
+    .botao.drop:hover {
+      background: #f5c5dc;
+    }
+
+    .rodape {
+      margin-top: 45px;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-attachment: scroll;
+        background-position: center;
+        padding: 35px 20px;
+      }
+
+      .logo img {
+        width: 155px;
+      }
+
+      .frase {
+        font-size: 11px;
+        letter-spacing: 2px;
+      }
+
+      .botao {
+        padding: 17px 15px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <main class="container">
 
-  
-<div class="logo">
-  <img src="logo-miletta.png"
-       alt="Use Miletta"
-       style="width: 180px; height: auto; display: block; margin: 0 auto;">
-</div>
+    <!-- LOGO ORIGINAL PRETA -->
+    <div class="logo">
+      <img
+        src="logo-miletta-preta.png"
+        alt="Logo Use Miletta"
+      >
+    </div>
 
-  <p class="frase">Elegância no seu movimento.</p>
+    <!-- FRASE DA MARCA -->
+    <p class="frase">
+      Elegância no seu movimento.
+    </p>
 
-  <div class="linha"></div>
+    <div class="linha"></div>
 
-  <div class="links">
+    <!-- BOTÕES -->
+    <div class="links">
 
-    <a class="botao"
-       href="LINK_DO_DROP"
-       target="_blank">
-       DROP
-    </a>
+      <!-- DROP -->
+      <a
+        class="botao drop"
+        href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTM5Nzk0Njc0MzgxNTA3?story_media_id=3982520431823185260_80222226622&amp;psln=aDU1YWg5a2d4b2Yw"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        DROP
+      </a>
 
-    <a class="botao"
-       href="https://wa.me/5511952987005"
-       target="_blank">
-       COMPRE PELO WHATSAPP
-    </a>
+      <!-- WHATSAPP -->
+      <a
+        class="botao"
+        href="https://wa.me/5511952987005"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        COMPRE PELO WHATSAPP
+      </a>
 
-    <a class="botao"
-       href="LINK_DO_GRUPO_VIP"
-       target="_blank">
-       GRUPO VIP
-    </a>
+      <!-- GRUPO VIP -->
+      <a
+        class="botao"
+        href="https://chat.whatsapp.com/EyHEoT9FaC55qsOlwBJ65W?s=cl&amp;p=i&amp;mlu=4&amp;ilr=4&amp;iam=2"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GRUPO VIP
+      </a>
 
-    <a class="botao"
-       href="LINK_DO_INSTAGRAM"
-       target="_blank">
-       INSTAGRAM
-    </a>
+      <!-- INSTAGRAM -->
+      <a
+        class="botao"
+        href="https://www.instagram.com/usemiletta?obrf=MTNieW84NnZlY3hsZQ=="
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        INSTAGRAM
+      </a>
 
-  </div>
+      <!-- SITE OFICIAL -->
+      <a
+        class="botao"
+        href="#"
+        onclick="alert('Em breve!'); return false;"
+      >
+        SITE OFICIAL
+      </a>
 
-  <footer class="rodape">
-    USE MILETTA © 2026
-  </footer>
+    </div>
 
-</div>
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+      USE MILETTA © 2026
+    </footer>
+
+  </main>
 
 </body>
 </html>
